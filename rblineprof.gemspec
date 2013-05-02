@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name = 'rblineprof'
-  s.version = '0.3.2'
+  s.version = '0.3.2.paperless'
   s.homepage = 'http://github.com/tmm1/rblineprof'
 
   s.authors = 'Aman Gupta'
@@ -12,5 +12,5 @@ Gem::Specification.new do |s|
   s.summary = 'line-profiler for ruby'
   s.description = 'rblineprof shows you lines of code that are slow.'
 
-  s.add_dependency 'debugger-ruby_core_source', '~> 1.2'
+  s.add_dependency 'debugger-ruby_core_source', '~> 1.1'
 end
