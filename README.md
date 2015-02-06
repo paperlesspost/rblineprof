@@ -1,27 +1,29 @@
+**Note that this fork is not currently maintained.  Please refer to [tmm1/rblineprof](https://github.com/tmm1/rblineprof)**
+
 # rblineprof
 
 ```
 % ruby -C ext extconf.rb
 % make -C ext
-% ruby test.rb 
+% ruby test.rb
            | $:.unshift 'ext'
            | require 'rblineprof'
-           | 
+           |
            | profile = lineprof(/./) do
      1.2ms |    sleep 0.001
-           | 
+           |
      0.1ms |    100.times do
-           | 
+           |
    119.6ms |      sleep 0.001
      0.7ms |      1*2*3
      0.2ms |      4*5*6
      0.4ms |      7*8*9*10*11*12*13*14*15
      0.2ms |      2**32
      1.4ms |      2**128
-           | 
+           |
            |   end
            | end
-           | 
+           |
            | File.readlines(__FILE__).each_with_index do |line, num|
            |   if (sample = profile[__FILE__][num+1]) > 0
            |     printf "% 8.1fms |  %s", sample/1000.0, line
